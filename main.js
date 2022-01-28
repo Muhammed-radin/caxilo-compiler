@@ -17,7 +17,7 @@ function stop() {
 function liverun() {
   document.getElementById('runBtn').disabled = true
   document.getElementById('stopBtn').disabled = true
-  $("#liveBtn").html(`<i class="fa fa-headset"></i><l></l>live running`)
+  $("#liveBtn").html(`<i class="fa fa-refresh spin"></i><l></l>live running`)
   setInterval(function() {
     $("#res").remove()
     $("html").append(`<div id="res"></div>`)
