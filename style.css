@@ -1,0 +1,9 @@
+body {
+  overflow: hidden;
+}
+#res {
+  border: 1px solid blueviolet;
+  height: 45vh;
+  margin: .5rem;
+  overflow: auto;
+}
