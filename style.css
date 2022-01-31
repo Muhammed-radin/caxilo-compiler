@@ -7,3 +7,10 @@ body {
   margin: .5rem;
   overflow: auto;
 }
+#key,#opn {
+  width: 80%;
+  font-family: 'Times New Roman', Times, serif
+}
+#falert,#falerta{
+  display: none;
+}
