@@ -1,3 +1,9 @@
+
+ var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.session.setMode("ace/mode/");
+editor.setValue('<html><html>')
+
 function run() {
   $("#res").remove()
   $("html").append(`<div id="res"></div>`)

@@ -21,26 +21,21 @@
 </head>
 
 <body style="margin: 0">
-  <div>
-    <textarea name="" id="" cols="30" rows="10" style="width: 100%;height: 48vh;font-family: 'Courier New', Courier, monospace">&lt;html&gt;&lt;h3&gt;welcome trudown codeplay&lt;/h3&gt;&lt;/html&gt;</textarea>
+  <div class="side-bar bg mdl">
+  <i class="fa fa-play"></i>
+  <br>
+  <i class="fa fa-stop"></i>
+  <br>
+  <i class="fa fa-save" onclick="openModal(falert)"></i>
+  <br>
+  <i class="fa fa-box" onclick="openModal(falerta)"></i>
+  <br>
+  <i class="fa fa-cog"></i>
+  
   </div>
-  <center><button onclick="run()" id="runBtn"><i class="fa fa-play"></i>
-      <l></l>run
-    </button><button onclick="stop()" id="stopBtn"><i class="fa fa-stop"></i>
-      <l></l>stop
-    </button><button onclick="liverun()" id="liveBtn"><i class="fa fa-headset"></i><l></l>live run</button>
-    <button onclick="openModal('falert')"><i class="fa fa-save"></i><!--l></l>save--></button><button onclick="openModal('falerta')"><i class="fab fa-dochub"></i><!--l></l>open--></button>
-    </center>
-    <!--input type="text" id="key" value="123">
-        <input type="text" id="opn" value="123">
-    <button onclick="saveDoc()">save</button>
-        <button onclick="openDoc()">open</button-->
-  <div id="res">
-   <center><h3>welcome playground</h3></center>
-   <hr>
-   <center><img src="http://muhammed-radin.github.io/trudown-css/src/img/trudown.png" alt="" style="width: 206px;height: 200px;"></center>
-  </div>
-  <div class="bg alert" id="falert">
+  <div id="editor"></div>
+  
+   <div class="bg alert" id="falert">
     <i class="fa fa-save"></i><span class="m1">save</span>
     <hr>
     <center>
@@ -64,10 +59,10 @@
       <button class="sec-button" onclick="openDoc()">ok</button>
     </div>
   </div>
- 
   <!-- Project -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://muhammed-radin.github.io/trudown-css/trudown.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js" integrity="sha512-6ts6Fu561/yzWvD6uwQp3XVYwiWNpWnZ0hdeQrETqtnQiGjTfOS06W76aUDnq51hl1SxXtJaqy7IsZ3oP/uZEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="main.js"></script>
 </body>
 
