@@ -2,7 +2,6 @@
  var editor = ace.edit("editor");
     editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/html");
-editor.setValue('')
 
 function run() {
   $("#res").remove()
@@ -86,4 +85,8 @@ function rBtn(){
   $("html").append(`<div id="res"></div>`)
   Msg('running')
   $("#res").append(editor.getValue())
+}
+function github(){
+  onHider("editor",true)
+  $("#github").css("display","block")
 }
