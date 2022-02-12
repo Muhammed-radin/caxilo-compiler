@@ -1,12 +1,21 @@
 
+ 
  var editor = ace.edit("editor");
     editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/html");
+let thisWin = window
 
+// setInterval(
+//   lang = document.getElementById('lang').value,
+//   console.log(lang),
+//   editor.session.setMode("ace/mode/"+lang),2000
+// )
 function run() {
   $("#res").remove()
   $("html").append(`<div id="res"></div>`)
   Msg('running')
+  $('#topBar').css('display','none')
+  $(".side-bar").css("top","0")
   $("#res").append(editor.getValue())
   document.getElementById('runBtn').disabled = true
  // $("#runBtn").html(`<i class="fa fa-play"></i><l></l>running`)
@@ -21,6 +30,8 @@ function stop() {
   openModal('editor')
   $("#res").remove()
   $("html").append(`<div id="res"></div>`)
+  $('#topBar').css('display','block')
+  $(".side-bar").css("top","2.5rem")
   document.getElementById('runBtn').disabled = false
   //$("#runBtn").html(`<i class="fa fa-play"></i><l></l>run`)
 }
@@ -34,7 +45,7 @@ function liverun() {
     $("#res").remove()
     $("html").append(`<div id="res"></div>`)
     $("#res").append(editor.getValue())
-  }, 500)
+  }, 3000)
 }
 
 function saveDoc() {
@@ -87,6 +98,18 @@ function rBtn(){
   $("#res").append(editor.getValue())
 }
 function github(){
-  onHider("editor",true)
-  $("#github").css("display","block")
+  window.open('https://github.com/Muhammed-radin/trudown-codeplay','_blank')
+}
+function elem(querySelector){
+ innerVal = document.querySelector(querySelector)
+  return innerVal;
+}
+function fScreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }

@@ -3,16 +3,25 @@ body {
   overflow: hidden;
   margin: 0;
 }
+* {
+  transition: none !important;
+  outline: none !important;
+}
+:root {
+  --color : #000;
+}
 #res {
-  border: 1px solid blueviolet;
   height: 100vh;
   margin: .5rem;
-  overflow: auto;
+  overflow: unset;
   position: absolute;
   left: 2.5rem;
   right: 0;
   top: 2.5rem;
   bottom: 0;
+}
+.window-close i{
+  color: #fff;
 }
 #key,#opn {
   width: 80%;
@@ -105,11 +114,45 @@ i:disabled{
   }
 }
 #github {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-    display: none;
+  display: none;
   left: 2.5rem;
   width: 100%;
   height: 100vh
 }
-  
+.window-close,.window-minimize,.window-screen {
+  position: fixed;
+  z-index: 999;
+}
+.drp {
+  cursor: pointer;
+  margin: 0.1rem;
+  padding: 0.1rem;
+}
+.drp:hover {
+  border: 1px solid #ccc;
+  border-style: dotted;
+  color: #000;
+  text-decoration: underline;
+}
+.drp-content {
+  display: none;
+  background-color: ghostwhite;
+  position: absolute;
+  box-shadow: 1px 1px 15px 10px rgba(165, 165, 165, 0.459);
+}
+.drp-content p {
+  padding: .1rem 2rem;
+  margin: .1rem;
+}
+.drp-content p:hover{
+  border: 1px solid #ccc;
+}
+.drp:hover .drp-content {
+  display: block;
+} 
+.row {
+  display: flex;
+  flex-direction: row;
+}
