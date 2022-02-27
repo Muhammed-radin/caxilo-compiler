@@ -1,5 +1,6 @@
+// import * from 'js/auto.js';
 
- 
+
  var editor = ace.edit("editor");
     editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/html");
@@ -28,10 +29,11 @@ function pass(){
 function stop() {
   onHider('res',true)
   openModal('editor')
+  $('#editor').css('display','block')
   $("#res").remove()
   $("html").append(`<div id="res"></div>`)
   $('#topBar').css('display','block')
-  $(".side-bar").css("top","2.5rem")
+  $(".side-bar").css("top","3rem")
   document.getElementById('runBtn').disabled = false
   //$("#runBtn").html(`<i class="fa fa-play"></i><l></l>run`)
 }
@@ -74,7 +76,7 @@ function openDoc() {
 function openModal(id) {
   $("body").append(`<style></style>`)
   $(id).css('display', 'block')
-  document.getElementById(id).style.display = 'block'
+  // document.getElementById(id).style.display = 'block'
 }
 var date = new Date()
 
@@ -113,3 +115,43 @@ function fScreen(elem) {
     elem.msRequestFullscreen();
   }
 }
+
+setInterval(
+  ()=>{
+    $("#topBar").css("width","100%")
+  },1000
+)
+
+let key =  document.querySelector('#key')
+let opn =  document.querySelector('#opn')
+let svBtn =  document.querySelector('#sv-btn')
+let opnBtn =  document.querySelector('#opn-btn')
+
+
+key.addEventListener('keypress',function (e){
+  if(e.keyCode === 13){
+    svBtn.click()
+  }
+})
+opn.addEventListener('keypress',function (e){
+  if(e.keyCode === 13){
+    opnBtn.click()
+  }
+})
+
+
+// var e = jQuery.Event('keydown')
+
+// e.which = 188
+// e.ctrlkey = true 
+// console.log(e);
+// $("body").trigger(e)
+
+// let body = document.querySelector('body')
+
+// body.addEventListener('keypress',function (e){
+//   if(e.keyCode == 188){
+//     alert()
+//   }
+// })
+autocomplete()

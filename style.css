@@ -8,11 +8,11 @@ body {
   outline: none !important;
 }
 :root {
-  --color : #000;
+  --color: #000;
 }
 #res {
   height: 100vh;
-  margin: .5rem;
+  margin: 0.5rem;
   overflow: unset;
   position: absolute;
   left: 2.5rem;
@@ -20,74 +20,77 @@ body {
   top: 2.5rem;
   bottom: 0;
 }
-.window-close i{
+.window-close i {
   color: #fff;
 }
-#key,#opn {
+#key,
+#opn {
   width: 80%;
-  font-family: 'Times New Roman', Times, serif
+  font-family: "Times New Roman", Times, serif;
 }
-#falert,#falerta{
+#falert,
+#falerta {
   display: none;
 }
-.side-bar{
+.side-bar {
   left: 0;
   width: 2.5rem;
-  top: 2.5rem;
+  top: 3rem;
   height: 100vh;
   background-color: var(--bg);
   -webkit-box-shadow: 1px 1px 2px 1px var(--sh);
   -moz-box-shadow: 1px 1px 2px 1px var(--sh);
   box-shadow: 1px 1px 2px 1px var(--sh);
 }
-.side-bar i{
-  padding: .6rem;
-  margin: .1rem;
+.side-bar i {
+  padding: 0.6rem;
+  margin: 0.1rem;
   border: 2px solid transparent;
 }
-.side-bar i:hover{
+.side-bar i:hover {
   border: 2px solid;
   border-style: dotted;
-  color: blue
+  color: blue;
 }
- #editor { 
-        position: absolute;
-        top: 3rem;
-        right: 0;
-        bottom: 0;
-        left: 2.5rem;
-        width: 100%
-    }
-.top-bar{
+#editor {
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  bottom: 0;
+  left: 2.5rem;
+  width: 100%;
+}
+.top-bar {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 2.5rem;
-  font-family: 'Courier New', Courier, monospace;
+  height: 3rem;
+  font-family: "Courier New", Courier, monospace;
   z-index: 100;
   -webkit-box-shadow: 1px 1px 2px 1px var(--sh);
   -moz-box-shadow: 1px 1px 2px 1px var(--sh);
   box-shadow: 1px 1px 2px 1px var(--sh);
 }
-i:disabled{
-  color: #ccc
+i:disabled {
+  color: #ccc;
 }
-.bg-alrtNotfy{
-  left: 4rem;
+.bg-alrtNotfy {
+  left: 3rem;
 }
 @keyframes downNot {
-  0% {}
+  0% {
+  }
 
   10% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   50% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   80% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   90% {
@@ -95,18 +98,19 @@ i:disabled{
   }
 }
 @keyframes downNot {
-  0% {}
+  0% {
+  }
 
   10% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   50% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   80% {
-    top: 2.5rem;
+    top: 3rem;
   }
 
   90% {
@@ -119,9 +123,11 @@ i:disabled{
   display: none;
   left: 2.5rem;
   width: 100%;
-  height: 100vh
+  height: 100vh;
 }
-.window-close,.window-minimize,.window-screen {
+.window-close,
+.window-minimize,
+.window-screen {
   position: fixed;
   z-index: 999;
 }
@@ -143,16 +149,49 @@ i:disabled{
   box-shadow: 1px 1px 15px 10px rgba(165, 165, 165, 0.459);
 }
 .drp-content p {
-  padding: .1rem 2rem;
-  margin: .1rem;
+  padding: 0.1rem 2rem;
+  margin: 0.1rem;
 }
-.drp-content p:hover{
+.drp-content p:hover {
   border: 1px solid #ccc;
 }
 .drp:hover .drp-content {
   display: block;
-} 
+}
+.drp-content span {
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+  color: #ccc;
+}
+.drp-content span:hover {
+  color: #0000ff;
+}
 .row {
   display: flex;
   flex-direction: row;
+}
+.win-btns {
+  position: absolute;
+  right: 0.5rem;
+  height: max-content;
+  width: max-content;
+}
+#Msg,
+#msg,
+.msg {
+  max-width: 50%;
+  /* background: rgb(37, 36, 44);
+  color: #fff; */
+  padding: 0.3rem 0.5rem;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  border: 0px;
+  background-image: linear-gradient(to bottom, #524f4f, #242020);
+  color: white;
+  /* text-align: center; */
+  font-family: "Courier New", Courier, monospace;
+  transition: 0.2s;
+  box-shadow: 1px 1px 3px 2px #000;
 }
